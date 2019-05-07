@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-back-button routerLink="/tabs/home" routerDirection="backward"></ion-back-button>
+    <ion-title>{{ individualProduct.product_name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="noBorder">
+    <ion-card-content text-center>
+        <ion-img [src]="individualProduct.image"></ion-img> <br>
+        <b> {{ individualProduct.product_name }} </b> <br>
+        ${{ individualProduct.price }} <br>
+        <br>
+        <div class='ion-text-start'>
+            {{ individualProduct.description }} <br>
+        </div>
+
+        <ion-button fill='clear' color='secondary' size='default' (click)="addToWishlist(individualProduct)"><ion-icon slot='icon-only' name='heart-empty'></ion-icon></ion-button>
+        <ion-button color='secondary' class='atc' size="default" expand="full" (click)="doConfirm(individualProduct)">Add to Cart</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

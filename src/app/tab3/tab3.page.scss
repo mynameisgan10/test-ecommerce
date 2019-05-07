@@ -1,0 +1,32 @@
+
+@import '../../theme/_noBorder-card';
+@import '../../theme/_deleteIcon';
+@import '../../theme/_buttonStyle';
+@import '../../theme/_ion-titleFont';
+@import'../../theme/_center-ion-img';
+@import '../../theme/_noBorder-product';
+@import '../../theme/_cart-img-size';
+
+.card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.des {
+    text-align: center;
+    margin: 1em;
+}
+
+.empty-cart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

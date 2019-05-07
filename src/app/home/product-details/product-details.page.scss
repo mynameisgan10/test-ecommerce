@@ -1,0 +1,13 @@
+@import '../../../theme/_noBorder-card';
+@import '../../../theme/_cart-img-size';
+
+.ion-text-start {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-toast {
+    --background: black !important;
+    --color: white !important;
+}

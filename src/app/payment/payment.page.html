@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tabs/tab3" routerDirection='back'></ion-back-button>
+        </ion-buttons>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<!-- test -->
+
+<ion-content>
+  <ion-card class='noBorder'>
+    <ion-card-content>
+
+      <ion-row>
+        <p style="text-align: left; color: #666666; font-weight: bold;">MY BAG</p> <br>
+      </ion-row>
+
+      <ion-row class='scroll' nowrap scrollX='true'>
+        <ion-col size='4' *ngFor='let product of returnCart; let i = index'>
+          <!-- <ion-col> -->
+            <div class='center'>
+                <ion-text>
+                    <h2>  
+                        <ion-img [src]='product.image'></ion-img> <br>
+                        {{ product.product_name }} <br>
+                        ${{ product.price }}</h2>
+                        <!-- <img src='assets/Asset 2.svg'> -->
+                       <!-- </h2>  -->
+                  </ion-text>
+                  <!-- <ion-button color='primary' (click)='getTotal()'>Calculate Total</ion-button> -->
+                 
+              </div>
+        </ion-col>
+      </ion-row>
+  
+         <div id='demo'></div>
+
+         <br>
+
+         <ion-row>
+            <p style="text-align: left; color: #666666; font-weight: bold;">DELIVERY ADDRESS</p>
+            <p style="text-align: left;">
+              Ang Chun Xiong <br>
+              Blk 426 Choa Chu Kang Ave 4 #06-176 <br>
+              Singapore 680426 <br>
+              92325735
+            <p>
+          </ion-row>
+    
+          <br>
+
+         <ion-row>
+            <p style="text-align: left; color: #666666; font-weight: bold;">WE ACCEPT</p>
+          </ion-row>
+    
+    <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
+
+        <ion-segment-button value="pinterest" mode='md'>
+            <img src='assets/apple-pay.svg'>
+          </ion-segment-button>
+  
+
+
+      <ion-segment-button value="master" mode='md'>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src='assets/mc.svg'>
+              </ion-col>
+
+              <ion-col>
+                  <img src='assets/visa.svg'>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-segment-button>
+
+      <ion-segment-button value="regular" mode='md'>
+          <img src='assets/PayPal_logo.svg'>
+      </ion-segment-button>
+      <br>
+
+        
+    </ion-segment>
+  
+    <div [ngSwitch]="galleryType">
+
+        <div class="images" *ngSwitchCase="'regular'">
+            <ion-grid *ngFor='let product of returnCart; let i = index'> 
+            <br>
+          
+            <div *ngIf='returnCart.length > 0'>
+          
+              <img (click)='pay(product, i)' class='paypalBtn' src="assets/PayPal_logo.svg" alt="PayPal Acceptance Mark">
+            </div>
+          
+            </ion-grid>
+        </div>
+
+        <div class="images" *ngSwitchCase="'pinterest'">
+          Applepay here
+          </div>
+
+          <div class="images" *ngSwitchCase="'master'">
+            <ion-item>
+              <ion-label position="floating">Name on card</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Card number</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="floating">Expiry date (MM/YY)</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Security code</ion-label>
+                    <ion-input></ion-input>
+                  </ion-item>
+          </div>
+
+      </div>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

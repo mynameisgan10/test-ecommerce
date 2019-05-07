@@ -1,0 +1,10 @@
+@import '../../theme/_ion-titleFont';
+@import '../../theme/ionSearchBar';
+@import '../../theme/_noBorder-card';
+@import '../../theme/_noBorder-product';
+@import '../../theme/_buttonStyle';
+
+ion-button {
+    --padding-top: 1.5em !important;
+    --padding-bottom: 1.5em !important;
+}

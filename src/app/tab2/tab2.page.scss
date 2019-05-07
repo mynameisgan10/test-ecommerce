@@ -1,0 +1,39 @@
+
+@import '../../theme/_noBorder-card';
+@import '../../theme/_deleteIcon';
+@import '../../theme/_buttonStyle';
+@import '../../theme/_ion-titleFont';
+@import '../../theme/_ion-badge';
+@import'../../theme/_center-ion-img';
+@import '../../theme/_noBorder-product';
+@import '../../theme/_cart-img-size';
+
+.category-block {
+    margin-bottom: 4px;
+}
+
+.des {
+    text-align: center;
+    margin: 1em;
+}
+
+ 
+.category-banner {
+    border-left: 8px solid var(--ion-color-secondary);
+    background: var(--ion-color-light);
+    height: 40px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.empty-cart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,55 @@
+<ion-header no-border>
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content>
+
+        <ion-card class='noBorder'>
+            <ion-card-content>
+              <h2>Free delivery above SGD $50</h2>
+            </ion-card-content>
+          </ion-card>
+        <ion-slides pager="true" [options]="slideOpts"> 
+          
+            <ion-slide *ngFor='let image of arrImg'>
+              <img src=' {{ image.photo }} '>
+            </ion-slide>
+
+          </ion-slides>
+      
+      <ion-card>
+        <ion-card-content>
+            <div class = 'newItems'>
+                Latest Release
+                  <div class = 'seeMore'>
+                    <ion-item routerLink='/tabs/home'>
+                          See More
+                        </ion-item>
+                  </div>
+                        
+              </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src='assets/shirt.jpg'>
+          </ion-col>
+
+          <ion-col>
+              <img src='assets/shirt.jpg'>
+            </ion-col>
+
+            <ion-col>
+                <img src='assets/shirt.jpg'>
+              </ion-col>
+              
+        </ion-row>
+
+
+
+      </ion-grid>
+
+</ion-content>

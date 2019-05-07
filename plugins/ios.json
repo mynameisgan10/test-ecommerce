@@ -1,0 +1,44 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.paypal.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    },
+    "cordova-plugin-googleplus": {
+      "REVERSED_CLIENT_ID": "com.googleusercontent.apps.563718902980-dr3bkr7s6bgnh1pinvdia3j6uaqociqo",
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    }
+  },
+  "dependent_plugins": {
+    "card.io.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.angularfirebase.myproject"
+    }
+  }
+}

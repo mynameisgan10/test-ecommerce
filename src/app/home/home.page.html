@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      PRODUCTS
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar (ionInput)="getItems($event)" animated></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+    
+  <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
+
+  <!-- <ion-segment-button value="pcat" mode='md'>
+      Category
+    </ion-segment-button> -->
+    
+    <ion-segment-button value="regular" mode='md'>
+      Men
+    </ion-segment-button>
+
+    <ion-segment-button value="pinterest" mode='md'>
+      Women
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <div [ngSwitch]="galleryType">
+
+      <!-- <div *ngSwitchCase="'pcat'">
+       
+        lol
+      </div> -->
+
+
+    <!-- Men -->
+
+ <div *ngSwitchCase="'regular'">
+    <ion-grid>
+      <!-- new -->
+      <ion-row > 
+
+        <ion-col size="6" *ngFor='let product of updatedProductArr; let b = index'>
+
+                  <div (click)='openDetails(product.product_id)'>
+                    <ion-card class='noBorder'>
+                        <ion-card-title>
+                          <ion-img [src]="product.image"></ion-img>
+                          <!-- {{ product.name }} -->
+                        </ion-card-title>
+
+                        <ion-card-content>
+                            {{ product.product_name }} <br>
+                            ${{ product.price }}
+                    
+                           <!-- <ion-button fill='clear' color='secondary' size='small' (click)="addToWishlist(product)"><ion-icon slot='icon-only' name='heart-empty'></ion-icon></ion-button>
+                          <ion-button color='secondary' class='atc' size="small" expand="full" (click)="doConfirm(product)">Add to Cart</ion-button> -->
+                        </ion-card-content>
+
+                    </ion-card>
+                   </div>
+
+                   <!-- <div class='thebtns'>
+                      <ion-button fill='clear' color='secondary' size='small' (click)="addToWishlist(product)"><ion-icon slot='icon-only' name='heart-empty'></ion-icon></ion-button>
+                      <ion-button color='secondary' class='atc' size="small" expand="full" (click)="doConfirm(product)">Add to Cart</ion-button>
+                   </div> -->
+                   
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+
+        <!-- Women -->
+    
+    <br>
+  <div *ngSwitchCase="'pinterest'">
+      <ion-grid>
+          <ion-row > 
+            <ion-col size='6' *ngFor='let product of updatedProductArr'>
+                <div>
+                    <div>
+                        <ion-card class='noBorder'>
+                            <ion-card-title>
+                              <ion-img [src]="product.image"></ion-img>
+                              <!-- {{ product.name }} -->
+                            </ion-card-title>
+    
+                            <ion-card-content>
+                                {{ product.product_name }}
+                                
+                                ${{ product.price }}
+                                                 
+                           <!-- <ion-button fill='clear' color='secondary' size='small' (click)="addToWishlist(product)"><ion-icon slot='icon-only' name='heart-empty'></ion-icon></ion-button>
+
+                           <ion-button color='secondary' size="small" expand="full" (click)="doConfirm(product)">Add to Cart</ion-button> -->
+                            </ion-card-content>
+                        </ion-card>
+                      </div>
+                </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+  </div>
+</ion-content>

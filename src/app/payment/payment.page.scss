@@ -1,0 +1,31 @@
+@import '../../theme/_buttonStyle';
+@import '../../theme/_noBorder-product';
+@import '../../theme/noBorder-card';
+
+.mypaypal {
+    text-align: center;
+}
+
+ion-button {
+    --background: #ffc438;
+    --color-selected:#ffc438;
+    --background-focused: #ffc438;;
+    --background-activated: #ffc438;
+} 
+
+.scroll {
+    overflow: auto;
+}
+
+ion-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paypalBtn {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

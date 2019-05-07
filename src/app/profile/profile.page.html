@@ -1,0 +1,45 @@
+<ion-header >
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/tab5"></ion-back-button>
+          </ion-buttons>
+      <ion-title>
+        PROFILE
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [scrollEvents] ='true' appParallax>
+    <div class="bg scroll-content">
+    </div>
+  
+    <div class="main-cnt scroll-content">
+      <!-- <img src="../../assets/asd.jpg" class="dp"> -->
+      <img src='assets/lady-macbook.svg' class='dp'>
+      <h3 text-center>Ang Chun Xiong</h3>
+      <ion-list no-lines>
+          <ion-item>
+              <ion-icon name="boat" slot="start"></ion-icon>
+              <ion-label>
+                Orders
+              </ion-label>
+            </ion-item>
+          
+            <ion-item routerLink='/tabs/tab2'>
+                <ion-icon name="heart" slot="start"></ion-icon>
+                <ion-label>
+                  Wishlist
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="exit" slot="start"></ion-icon>
+                  <ion-label>
+                    Log Out
+                  </ion-label>
+                </ion-item>
+
+              
+      </ion-list>
+    </div>
+  </ion-content>
+  
