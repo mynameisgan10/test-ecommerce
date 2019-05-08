@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ServiceCartService } from 'src/app/service-cart.service';
+import { ServiceCartService } from '../../service-cart.service';
 
 @Component({
   selector: 'app-category-details',
